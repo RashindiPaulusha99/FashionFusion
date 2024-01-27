@@ -2,12 +2,12 @@ import React,{Fragment,useEffect,useState} from "react";
 import Header from "../layouts/home/Header";
 import HeaderIcons from "../layouts/home/HeaderIcons";
 import Footer from "../layouts/home/Footer";
-import bgImage from "../assets/images/blogs/Silverlake_1531_1500x1000px.jpg";
-import postThumb1 from "../assets/images/blogs/iStock-1214541379-scaled.jpg";
-import postThumb2 from "../assets/images/blogs/5c4670410525e.image.jpg";
-import postThumb3 from "../assets/images/blogs/Silverlake_1531_1500x1000px.jpg";
-import postThumb4 from "../assets/images/blogs/Food-Grocery-Vegetables-1140771380.jpg";
-import postThumb5 from "../assets/images/blogs/AdobeStock_97902007-scaled.jpeg";
+import bgImage from "../assets/images/fashion/viubox-746x620.jpg";
+import postThumb1 from "../assets/images/fashion/frame-99.jpg";
+import postThumb2 from "../assets/images/fashion/9 Minimalist Style Fashion Bloggers You Should Know 001.jpg";
+import postThumb3 from "../assets/images/fashion/63bf1f4387ee8107fe76236f_howitworks.png";
+import postThumb4 from "../assets/images/fashion/VTO.jpg";
+import postThumb5 from "../assets/images/fashion/Top-Fashion-Bloggers-minimalist-modest-mom-blog-fashion-outfits-1.jpg";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
@@ -44,7 +44,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Get The Fresh & Best Groceries Delivered</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -67,7 +67,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Everything You Need For Delicious Meal</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -90,7 +90,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Profitable, Personalized Shopping Without The Headaches</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -113,7 +113,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Wake Up Early , Eat Fresh & Healthy</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -136,7 +136,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Make Healthy Life With Fresh Grocery Products</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -159,7 +159,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Get The Fresh & Best Groceries Delivered</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -182,7 +182,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Everything You Need For Delicious Meal</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
@@ -205,7 +205,7 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Profitable, Personalized Shopping Without The Headaches</a>
+                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
                                         </h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
                                     </div>
