@@ -170,7 +170,7 @@ const Footer=()=>{
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-6 copyright">
-                            <p>© 2023 FreshZone. All rights reserved.</p>
+                            <p>© 2023 FashionFusion. All rights reserved.</p>
                         </div>
                         <div className="col-md-6 credit-link text-end">
                             <p>Created By <a href="https://templatesjungle.com/">Rashindi</a></p>

@@ -4,12 +4,12 @@ import HeaderIcons from "../layouts/home/HeaderIcons";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Footer from "../layouts/home/Footer";
-import bgImage from '../assets/images/gemma-stpjHJGqZyw-unsplash.jpg'
+import bgImage from '../assets/images/fashion/Top-Fashion-Bloggers-minimalist-modest-mom-blog-fashion-outfits-1.jpg'
 import ceo from '../assets/images/blogs/CEO-Advantages.jpg'
 import director from '../assets/images/blogs/Shutterstock_1361250623-2.jpg'
 import manager from '../assets/images/blogs/office-manager-woman.jpg'
-import bgImage1 from '../assets/images/blogs/89OtM0k3-online-grocery-deliveries-to-check-out-in-the-UAE-1200x800.jpg'
-import bgImage2 from '../assets/images/blogs/Food-Grocery-Vegetables-1140771380.jpg'
+import bgImage1 from '../assets/images/fashion/9 Minimalist Style Fashion Bloggers You Should Know 001.jpg'
+import bgImage2 from '../assets/images/fashion/frame-99.jpg'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import CardMedia from "@mui/material/CardMedia";
