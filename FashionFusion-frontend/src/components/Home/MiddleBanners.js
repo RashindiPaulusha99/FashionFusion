@@ -12,8 +12,8 @@ const MiddleBanners=()=>{
                             <div className="banner-content p-5">
 
                                 <div className="categories text-primary fs-3 fw-bold">Upto 25% Off</div>
-                                <h3 className="banner-title">Luxa Dark Chocolate</h3>
-                                <p>Very tasty & creamy vanilla flavour creamy muffins.</p>
+                                <h3 className="banner-title">Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
                                 <a href="#" className="btn btn-dark text-uppercase">Show Now</a>
 
                             </div>
@@ -25,8 +25,8 @@ const MiddleBanners=()=>{
                             <div className="banner-content p-5">
 
                                 <div className="categories text-primary fs-3 fw-bold">Upto 25% Off</div>
-                                <h3 className="banner-title">Creamy Muffins</h3>
-                                <p>Very tasty & creamy vanilla flavour creamy muffins.</p>
+                                <h3 className="banner-title">Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>
                                 <a href="#" className="btn btn-dark text-uppercase">Show Now</a>
 
                             </div>

@@ -112,7 +112,7 @@ const DashboardHeader=(props)=>{
                 component="div"
                 sx={{ display: { xs: 'none', sm: 'block' ,fontWeight:'bold'} }}
             >
-                FreshZone
+                FashionFusion
             </Typography>
             <Search>
                 <SearchIconWrapper>

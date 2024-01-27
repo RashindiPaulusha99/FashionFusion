@@ -1,18 +1,6 @@
 import React, {useEffect, useState} from "react";
-import Drawer from "@mui/material/Drawer";
-import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
 import '../../assets/css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from '@mui/material/Button';
-import Cart from "../../pages/Cart";
 import {useHistory} from "react-router-dom";
 
 const HeaderIcons=()=>{

@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import grocery from "../../assets/images/grocery.jpg";
+import fashionfusion from "../../assets/images/fashion/Camerino-virtuale-1024x885.jpg";
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
@@ -21,8 +21,8 @@ const Footer=()=>{
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="footer-menu">
                                 <a href="#" style={{textDecoration: 'none'}}>
-                                    <img src={grocery} alt="logo" className="img-fluid" style={{height: 68}}/>
-                                    <h4 style={{display: 'inline',color: 'darkkhaki',fontFamily: 'monospace'}}>FreshZone</h4>
+                                    <img src={fashionfusion} alt="logo" className="img-fluid" style={{height: 68}}/>
+                                    <h4 style={{display: 'inline',color: 'darkkhaki',fontFamily: 'monospace'}}>FashionFusion</h4>
                                 </a>
                                 <div className="social-links mt-5">
                                     <ul className="d-flex list-unstyled gap-2">

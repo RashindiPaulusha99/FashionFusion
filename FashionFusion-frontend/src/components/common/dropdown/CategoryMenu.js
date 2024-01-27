@@ -2,16 +2,14 @@ import React, {useEffect, useState} from "react";
 import { useHistory,withRouter } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import vegetables from "../../../assets/images/icons8-vegetables-35.png";
+import Tshirt from "../../../assets/images/fashion/icons8-clothes-35.png";
 import Divider from "@mui/material/Divider";
-import fruits from "../../../assets/images/icons8-fish-35.png";
-import beverages from "../../../assets/images/icons8-beverages-35.png";
-import milk from "../../../assets/images/icons8-milk-35.png";
-import spices from "../../../assets/images/icons8-biscuits-35.png";
-import meats from "../../../assets/images/icons8-steak-35.png";
-import fish from "../../../assets/images/icons8-fish-35.png";
-import backed from "../../../assets/images/icons8-baked-35.png";
-import fastFoods from "../../../assets/images/icons8-biscuits-35.png";
+import trouser from "../../../assets/images/fashion/icons8-trousers-35.png";
+import blouse from "../../../assets/images/fashion/icons8-blouse-top-35.png";
+import frock from "../../../assets/images/fashion/icons8-blouse-35 (1).png";
+import skirt from "../../../assets/images/fashion/icons8-skirt-35.png";
+import underwear from "../../../assets/images/fashion/icons8-panties-35.png";
+import accessories from "../../../assets/images/fashion/icons8-accessories-35.png";
 import Menu from "@mui/material/Menu";
 
 const  CategoryMenu=(props)=>{
@@ -45,92 +43,72 @@ const  CategoryMenu=(props)=>{
         >
             <MenuItem onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Vegetables")
+                handleLoadProducts("Tshirt")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}}>
-                    <img src={vegetables} alt="vegetables" className="navImage"/>
+                    <img src={Tshirt} alt="Tshirt" className="navImage"/>
                 </ListItemIcon>
-                Vegetables
+                Tshirt
             </MenuItem>
             <Divider />
             <MenuItem onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Fruits")
+                handleLoadProducts("Trouser")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}}>
-                    <img src={fruits} alt="fruits" className="navImage"/>
+                    <img src={trouser} alt="Trouser" className="navImage"/>
                 </ListItemIcon>
-                Fruits
+                Trouser
             </MenuItem>
             <Divider />
             <MenuItem  onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Soft Drinks")
+                handleLoadProducts("Blouse")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}}>
-                    <img src={beverages} alt="beverages" className="navImage"/>
+                    <img src={blouse} alt="Blouse" className="navImage"/>
                 </ListItemIcon>
-                Beverages
+                Blouse
             </MenuItem>
             <Divider />
             <MenuItem  onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Milk")
+                handleLoadProducts("Flock")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}} >
-                    <img src={milk} alt="milk" className="navImage"/>
+                    <img src={frock} alt="frock" className="navImage"/>
                 </ListItemIcon>
-                Milk
+                Frock
             </MenuItem>
             <Divider />
             <MenuItem  onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Spices")
+                handleLoadProducts("Skirt")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}} >
-                    <img src={spices} alt="spices" className="navImage"/>
+                    <img src={skirt} alt="Skirt" className="navImage"/>
                 </ListItemIcon>
-                Spices
+                Skirt
             </MenuItem>
             <Divider />
             <MenuItem onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Meats")
+                handleLoadProducts("Underwear")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}}>
-                    <img src={meats} alt="meats" className="navImage"/>
+                    <img src={underwear} alt="Underwear" className="navImage"/>
                 </ListItemIcon>
-                Meats
+                Underwear
             </MenuItem>
             <Divider />
             <MenuItem  onClick={()=>{
                 props.handleClose()
-                handleLoadProducts("Sea Foods")
+                handleLoadProducts("Accessories")
             }}>
                 <ListItemIcon style={{cursor:'pointer'}} >
-                    <img src={fish} alt="sea foods" className="navImage"/>
+                    <img src={accessories} alt="accessories" className="navImage"/>
                 </ListItemIcon>
-                Sea Foods
-            </MenuItem>
-            <Divider />
-            <MenuItem onClick={()=>{
-                props.handleClose()
-                handleLoadProducts("Baked Products")
-            }}>
-                <ListItemIcon style={{cursor:'pointer'}} >
-                    <img src={backed} alt="backed" className="navImage"/>
-                </ListItemIcon>
-                Baked Products
-            </MenuItem>
-            <Divider />
-            <MenuItem onClick={()=>{
-                props.handleClose()
-                handleLoadProducts("Fast Foods")
-            }}>
-                <ListItemIcon style={{cursor:'pointer'}} >
-                    <img src={fastFoods} alt="fast foods" className="navImage"/>
-                </ListItemIcon>
-                Fast Foods
+                Accessories
             </MenuItem>
         </Menu>
     )

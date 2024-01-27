@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-import grocery from "../../assets/images/fashion/Camerino-virtuale-1024x885.jpg";
+import fashionfusion from "../../assets/images/fashion/Camerino-virtuale-1024x885.jpg";
 import CategoryMenu from "../../components/common/dropdown/CategoryMenu";
 import ProfileMenu from "../../components/common/dropdown/ProfileMenu";
 import HomeService from "../../Services/HomeService";
@@ -95,7 +95,7 @@ const Header=(props)=>{
                     <div className="col-sm-4 col-lg-3 text-center text-sm-start">
                         <div className="main-logo">
                             <a href="#" style={{textDecoration: 'none'}}>
-                                <img src={grocery} alt="logo" className="img-fluid" style={{height: 68}}/>
+                                <img src={fashionfusion} alt="logo" className="img-fluid" style={{height: 68}}/>
                                 <h4 style={{display: 'inline',color: 'darkkhaki',fontFamily: 'monospace'}}>FashionFusion</h4>
                             </a>
                         </div>

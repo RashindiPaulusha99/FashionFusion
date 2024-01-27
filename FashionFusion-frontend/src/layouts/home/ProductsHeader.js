@@ -2,7 +2,7 @@ import React, {useEffect,useState} from "react";
 import { useHistory } from "react-router-dom";
 import {useSelector} from "react-redux";
 
-import grocery from "../../assets/images/grocery.jpg";
+import fashionfusion from "../../assets/images/fashion/Camerino-virtuale-1024x885.jpg";
 import ProfileMenu from "../../components/common/dropdown/ProfileMenu";
 import HomeService from "../../Services/HomeService";
 
@@ -66,8 +66,8 @@ const ProductsHeader=(props)=>{
                     <div className="col-sm-4 col-lg-3 text-center text-sm-start">
                         <div className="main-logo">
                             <a href="#" style={{textDecoration: 'none'}}>
-                                <img src={grocery} alt="logo" className="img-fluid" style={{height: 68}}/>
-                                <h4 style={{display: 'inline',color: 'darkkhaki',fontFamily: 'monospace'}}>FreshZone</h4>
+                                <img src={fashionfusion} alt="logo" className="img-fluid" style={{height: 68}}/>
+                                <h4 style={{display: 'inline',color: 'darkkhaki',fontFamily: 'monospace'}}>FashionFustion</h4>
                             </a>
                         </div>
                     </div>
