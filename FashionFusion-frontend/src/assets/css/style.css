@@ -415,12 +415,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .banner-ad-image1{
-  background: url(../images/ad-image-1.png) no-repeat;
+  /*background: url(../images/fashion/Miss_Maquillage_Digital_Fashion_Garment_example.png) no-repeat;*/
   background-position: right bottom;
 }
 
 .banner-ad-image2{
-  background: url(../images/ad-image-2.png) no-repeat;
+  /*background: url(../images/fashion/kohls-levis-1.jpeg) no-repeat;*/
   background-position: right bottom;
 }
 .banner-ad-image3{

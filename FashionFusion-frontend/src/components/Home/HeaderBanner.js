@@ -3,9 +3,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import vegetables_broccoli from "../../assets/images/icon-vegetables-broccoli.png";
 import Slider from "infinite-react-carousel";
-import productThumb1 from "../../assets/images/Daco_4281852.png";
-import productThumb from "../../assets/images/product-thumb-1.png";
-import productThumb2 from "../../assets/images/product-thumb-2.png";
+import productThumb1 from "../../assets/images/fashion/virtual-fashion-apps-2-683x1024.webp";
+import productThumb from "../../assets/images/fashion/retail-clothing-try-on-via-mobile-and-kiosk-augmented-reality+(2).png";
+import productThumb2 from "../../assets/images/fashion/viubox-746x620.jpg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -48,8 +48,8 @@ const HeaderBanner=()=>{
                                             <div className="swiper-slide">
                                                 <div className="row banner-content p-5">
                                                     <div className="content-wrapper col-md-7">
-                                                        <div className="categories mb-3 pb-3">100% natural</div>
-                                                        <h3 className="banner-title">Fresh Smoothie & Summer Juice</h3>
+                                                        <div className="categories mb-3 pb-3">Lorem ipsum</div>
+                                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
                                                         <a href="#g" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop collection</a>
                                                     </div>
@@ -61,8 +61,8 @@ const HeaderBanner=()=>{
                                             <div className="swiper-slide">
                                                 <div className="row banner-content p-5">
                                                     <div className="content-wrapper col-md-7">
-                                                        <div className="categories mb-3 pb-3">100% natural</div>
-                                                        <h3 className="banner-title">Fresh Meat & Sea Food</h3>
+                                                        <div className="categories mb-3 pb-3">Lorem ipsum</div>
+                                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
                                                         <a href="#g" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop collection</a>
                                                     </div>
@@ -74,8 +74,8 @@ const HeaderBanner=()=>{
                                             <div className="swiper-slide">
                                                 <div className="row banner-content p-5">
                                                     <div className="content-wrapper col-md-7">
-                                                        <div className="categories mb-3 pb-3">100% natural</div>
-                                                        <h3 className="banner-title">Heinz Tomato Ketchup</h3>
+                                                        <div className="categories mb-3 pb-3">Lorem ipsum</div>
+                                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
                                                         <a href="#g" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop collection</a>
                                                     </div>
@@ -93,8 +93,8 @@ const HeaderBanner=()=>{
                                 <div className="row banner-content p-5">
 
                                     <div className="content-wrapper col-md-7">
-                                        <div className="categories sale mb-3 pb-3">100% Organic</div>
-                                        <h3 className="banner-title">Fruits & Vegetables</h3>
+                                        <div className="categories sale mb-3 pb-3">Lorem ipsum</div>
+                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
                                         <a href="#g" className="d-flex align-items-center nav-link">shop collection <svg width="24" height="24"><use xlinkHref="#arrow-right"></use></svg></a>
                                     </div>
 
@@ -105,8 +105,8 @@ const HeaderBanner=()=>{
                                 <div className="row banner-content p-5">
 
                                     <div className="content-wrapper col-md-7">
-                                        <div className="categories sale mb-3 pb-3">100% Best</div>
-                                        <h3 className="item-title">Baked Products</h3>
+                                        <div className="categories sale mb-3 pb-3">Lorem ipsum</div>
+                                        <h3 className="item-title">Lorem ipsum dolor sit amet</h3>
                                         <a href="#g" className="d-flex align-items-center nav-link">shop collection <svg width="24" height="24"><use xlinkHref="#arrow-right"></use></svg></a>
                                     </div>
 
