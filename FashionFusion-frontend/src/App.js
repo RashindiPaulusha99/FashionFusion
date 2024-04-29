@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import {Route,Switch} from "react-router-dom";
 import NotFoundIndex from "./pages/NotFoundIndex";
 import Home from "./pages/Home";
@@ -15,6 +15,7 @@ import Blog from "./components/Home/Blog";
 import BlogPage from "./pages/BlogPage";
 import ServicePage from "./pages/ServicePage";
 import ContactPage from "./pages/ContactPage";
+import TryOnPage from "./pages/TryOn";
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route path='/products'>
               <Products/>
+          </Route>
+          <Route path='/try'>
+              <TryOnPage/>
           </Route>
           <Route path='/response'>
               <PaymentResponse/>

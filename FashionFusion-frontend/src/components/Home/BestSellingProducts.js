@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Slide from "@mui/material/Slide";
-import HomeService from "../../Services/HomeService";
+import ItemService from "../../Services/ProductService";
 import ModalCart from "../common/model/ModalCart";
 import Button from "@mui/material/Button";
 import blouse1 from "../../assets/images/fashion/1.jpg";
@@ -45,7 +45,7 @@ const BestSellingProducts=(props)=>{
     }, []);
 
     const fetchDetails = async()=>{
-        const response = await HomeService.fetchItems(status);
+        const response = await ItemService.fetchItems(status);
 
         if (response.status === 200){
             setPosts(response.data);
@@ -87,18 +87,19 @@ const BestSellingProducts=(props)=>{
                             <div className="swiper-wrapper">
                                 <Box sx={{ flexGrow: 1 }} >
                                     <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }} >
-                                        {/*{posts.slice(0, itemsToShow).map(({_id,image,name,unit_of_volume,unit_price,volume}, index) =>(
+                                        {posts.slice(0, itemsToShow).map(({_id,item_image,name,colours,unit_price,sizes,brand}, index) =>(
                                             <Grid item xs={4} lg={2.4} md={2.4}  key={index} >
                                                 <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(_id)}>
                                                     <div className="product-item">
 
                                                         <figure>
                                                             <a title="Product Title">
-                                                                <img src={'data:image/jpeg;base64,'+arrayBufferToBase64(image.data.data)} alt='thumb bananas' className="tab-image"/>
+                                                                {/*<img src={'data:image/jpeg;base64,'+arrayBufferToBase64(image.data.data)} alt='thumb bananas' className="tab-image"/>*/}
+                                                                <img src={item_image} alt='thumb bananas' className="tab-image"/>
                                                             </a>
                                                         </figure>
                                                         <h3>{name}</h3>
-                                                        <span className="qty">{volume+" "+unit_of_volume}</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
+                                                        <span className="qty">{brand}</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
                                                         <span className="price">{"Rs "+unit_price+".00"}</span>
                                                         <div className="d-flex align-items-center justify-content-between">
 
@@ -111,227 +112,7 @@ const BestSellingProducts=(props)=>{
                                                     </div>
                                                 </div>
                                             </Grid>
-                                        ))}*/}
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={blouse1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={trouser1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={frock1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={tshirt1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={skirt1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={underwear1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={bra1} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={blouse2} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={trouser2} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                        <Grid item xs={4} lg={2.4} md={2.4}  >
-                                            <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(1)}>
-                                                <div className="product-item">
-                                                    <figure>
-                                                        <a title="Product Title">
-                                                            <img src={frock2} alt='thumb bananas' className="tab-image"/>
-                                                        </a>
-                                                    </figure>
-                                                    <h3>Lorem ipsum</h3>
-                                                    <span className="qty">lorem ipsum</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
-                                                    <span className="price">{"Rs 1000.00"}</span>
-                                                    <div className="d-flex align-items-center justify-content-between">
-
-                                                        <a className="btn-wishlist">
-                                                            <svg width="24" height="24">
-                                                                <use xlinkHref="#plus"></use>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Grid>
+                                        ))}
                                     </Grid>
                                 </Box>
                             </div>

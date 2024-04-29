@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import FormHelperText from '@mui/material/FormHelperText';
 import image from '../assets/images/fashion/ShopEx-image.jpg';
 import {useHistory} from "react-router-dom";
-import HomeService from "../Services/HomeService";
+import UserService from "../Services/UserService";
 import SnackBar from "../components/common/alert/SnackBar";
 
 const RedditTextField = styled((props) => (
@@ -83,9 +83,12 @@ const Register=()=>{
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1; // Month is zero-based, so add 1
             const year = currentDate.getFullYear();
+            const hour = currentDate.getHours();
+            const minute = currentDate.getMinutes() + 1; // Month is zero-based, so add 1
+            const second = currentDate.getSeconds();
 
             // Format the date as a string in the desired format (e.g., DD/MM/YYYY)
-            const formattedDate = `${day}-${month}-${year}`;
+            const formattedDate = `${day}-${month}-${year} ${hour}:${minute}:${second}`;
 
             const user={
                 "name":name,
@@ -94,7 +97,7 @@ const Register=()=>{
                 "role":'USER',
                 "addedDate":formattedDate
             }
-            const response = await HomeService.saveUser(user)
+            const response = await UserService.saveUser(user)
 
             if (response.status === 200){
                 setSeverity("success")

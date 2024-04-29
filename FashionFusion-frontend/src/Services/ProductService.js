@@ -1,46 +1,12 @@
 import axios from "../data/axios";
 
-class HomeService {
+class ProductService {
 
-    saveCart = async (data) =>{
-        const promise = new Promise((resolve, reject) =>{
-            axios.post('/cart/save',data)
-                .then((res) =>{
-                    return resolve(res)
-                }).catch((error) =>{
-                return resolve(error)
-            })
-        })
-        return await promise
-    }
+    fetchItems = async (status)=>{
 
-    updateCart = async (id,data) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.put(`/cart/update/${id}`,data)
-                .then((res) =>{
-                    return resolve(res)
-                }).catch((error) =>{
-                return resolve(error)
-            })
-        })
-        return await promise
-    }
 
-    getCart = async (id) =>{
-        const promise = new Promise((resolve, reject) =>{
-            axios.get('/cart/get/userBy/'+id)
-                .then((res) =>{
-                    return resolve(res)
-                }).catch((error) =>{
-                return resolve(error)
-            })
-        })
-        return await promise
-    }
-
-    getACart = async (id) =>{
-        const promise = new Promise((resolve, reject) =>{
-            axios.get('/cart/get/'+id,{
+            axios.get('/item/getAll/'+status,{
             })
                 .then((res) =>{
                     return resolve(res)
@@ -51,9 +17,9 @@ class HomeService {
         return await promise
     }
 
-    deleteCart = async (id) =>{
+    fetchItem = async (id) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.delete('/cart/delete/'+id,{
+            axios.get('/item/get/'+id,{
             })
                 .then((res) =>{
                     return resolve(res)
@@ -64,9 +30,10 @@ class HomeService {
         return await promise
     }
 
-    savePayment = async (data) =>{
+    fetchItemsByOrder = async (status,order) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.post('/payment/save',data)
+            axios.get('/item/getOrder/'+status+'/'+order,{
+            })
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -76,9 +43,9 @@ class HomeService {
         return await promise
     }
 
-    getAllPayments = async () =>{
+    deleteItem = async (id) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.get('/payment/getAll')
+            axios.delete('/item/delete/'+id)
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -88,10 +55,9 @@ class HomeService {
         return await promise
     }
 
-    virtualTryOn = async (data) => {
-
+    saveItem = async (data) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.post('/cart/try',data)
+            axios.post('/item/save',data)
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -101,7 +67,31 @@ class HomeService {
         return await promise
     }
 
+    updateQty = async (id,body)=>{
 
+        const promise = new Promise((resolve, reject) =>{
+
+            axios.put('/item/updateQty/'+id,body)
+                .then((res) =>{
+                    return resolve(res)
+                }).catch((error) =>{
+                return resolve(error)
+            })
+        })
+        return await promise
+    }
+
+    updateItem = async (id,data) =>{
+        const promise = new Promise((resolve, reject) =>{
+            axios.put(`/item/update/${id}`,data)
+                .then((res) =>{
+                    return resolve(res)
+                }).catch((error) =>{
+                return resolve(error)
+            })
+        })
+        return await promise
+    }
 }
 
-export default new HomeService();
+export default new ProductService();

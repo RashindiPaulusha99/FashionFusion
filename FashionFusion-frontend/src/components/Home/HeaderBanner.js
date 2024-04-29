@@ -3,9 +3,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import vegetables_broccoli from "../../assets/images/icon-vegetables-broccoli.png";
 import Slider from "infinite-react-carousel";
-import productThumb1 from "../../assets/images/fashion/virtual-fashion-apps-2-683x1024.webp";
+import productThumb1 from "../../assets/images/fashion/4df9ea608491414e585855dc7c8406f1.jpg";
 import productThumb from "../../assets/images/fashion/retail-clothing-try-on-via-mobile-and-kiosk-augmented-reality+(2).png";
-import productThumb2 from "../../assets/images/fashion/viubox-746x620.jpg";
+import productThumb2 from "../../assets/images/fashion/virtual-dressing-room-app-7.avif";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 

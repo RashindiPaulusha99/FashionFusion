@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Divider from '@mui/material/Divider';
-import logo from '../assets/images/grocery.jpg'
+import fashionfusion from "../assets/images/fashion/Camerino-virtuale-1024x885.jpg";
 import DashboardHeader from "../layouts/dashboard/DashboardHeader";
 import DrawerList from "../components/dashboard/body/dashboard/DrawerList";
 import DashboardBody from "../components/dashboard/body/dashboard/DashboardBody";
@@ -49,7 +49,7 @@ const Dashboard=(props)=>{
                         },
                     }} >
                     <Toolbar />
-                    <img src={logo} alt='logo' style={{width:50,height:50,position:'absolute',left:15,top:8}}/>
+                    <img src={fashionfusion} alt='logo' style={{width:50,height:50,position:'absolute',left:15,top:8}}/>
                     <Divider />
                     <DrawerList clickedColour={clickedColour} handleClick={handleClick}/>
                 </Drawer>

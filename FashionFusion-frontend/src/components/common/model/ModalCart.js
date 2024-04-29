@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import TextField from '@mui/material/TextField';
+import ItemService from "../../../Services/ProductService";
 import HomeService from "../../../Services/HomeService";
 import { makeStyles } from "@material-ui/core/styles";
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
@@ -46,30 +47,30 @@ const ModalCart=(props)=>{
     const[qtyOnHand, setQtyOnHand]=useState(0)
     const[brand, setBrand]=useState('')
     const[discount, setDiscount]=useState(0)
-    const[volume, setVolume]=useState(0)
-    const[unitOfVolume, setUnitOfVolume]=useState('')
+    const[colours, setColours]=useState(0)
+    const[sizes, setSizes]=useState('')
     const[unitPrice, setUnitPrice]=useState(0)
     const [countCart, setCountCart] = useState(1);
-    const userData = useSelector((state) => state.login.isLogged);
 
     const style = useStyle();
 
     useEffect(()=>{
+
         test(props.id)
     },[])
 
     const test=async (e)=>{
-        const response  = await HomeService.fetchItem(e);
+        const response  = await ItemService.fetchItem(e);
 
-        setImage(response.data.image.data.data)
+        setImage(response.data.item_image)
         setId(response.data._id)
         setBrand(response.data.brand)
         setCategory(response.data.category)
         setName(response.data.name)
         setDescription(response.data.description)
         setQtyOnHand(response.data.qty_on_hand)
-        setVolume(response.data.volume)
-        setUnitOfVolume(response.data.unit_of_volume)
+        setColours('blue')
+        setSizes('L')
         setUnitPrice(response.data.unit_price)
         setDiscount(response.data.discount)
     }
@@ -98,28 +99,31 @@ const ModalCart=(props)=>{
         }
 
         const cart = {
-            "user_Id": userData.id,
+            "user_Id": localStorage.getItem("userId"),
             "item_Id": id,
             "name": name,
             "brand": brand,
             "qty": countCart,
+            "colour": colours,
+            "size": sizes,
             "unit_price": unitPrice,
             "total_units_price": price * countCart
         };
 
-        const carts = await HomeService.getCart(userData.id);
-        console.log(carts)
+        const carts = await HomeService.getCart(localStorage.getItem("userId"));
 
         if (carts.data.length !== 0) {
             let itemFound = false;
             for (let dataKey in carts.data) {
                 if (id === carts.data[dataKey].item_Id) {
                     const updateCart = {
-                        "user_Id": userData.id,
+                        "user_Id": localStorage.getItem("userId"),
                         "item_Id": id,
                         "name": name,
                         "brand": brand,
                         "qty": countCart + carts.data[dataKey].qty,
+                        "colour": colours,
+                        "size": sizes,
                         "unit_price": unitPrice,
                         "total_units_price": price * (countCart + carts.data[dataKey].qty)
                     };
@@ -150,11 +154,25 @@ const ModalCart=(props)=>{
 
             if (response.status === 200) {
                 history.push({
-                    pathname: '/cart'
+                    pathname: '/cart',
+                    state: cart.item_Id
                 });
             }
         }
     };
+
+    const handleTryOn=()=>{
+        localStorage.setItem("image",image)
+        localStorage.setItem("category",category)
+        history.push({
+            pathname: '/try',
+            state: {
+                image: image,
+                id: id,
+                category: category
+            }
+        });
+    }
 
     return(
 
@@ -190,14 +208,18 @@ const ModalCart=(props)=>{
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6} lg={6}>
-                <div style={{width:'100%',height:'90%',boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 2px 0px',borderRadius:10}}>
-                    <img src={'data:image/jpeg;base64,'+arrayBufferToBase64(image)} alt='product' style={{width:'100%',height:'100%',padding:20}}/>
-                </div>
+                    {/*<Button size='large' style={{backgroundColor:'mediumturquoise',color:'white',boxShadow:'rgba(0, 0, 0, 0.16) 0px 1px 4px'}} onClick={handleTryOn}>Try On</Button>*/}
+                    <div style={{width:'100%',height:'90%',boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 2px 0px',borderRadius:10}}>
+                        <img src={image} alt='product' style={{width:'100%',height:'100%',padding:20}}/>
+                    </div>
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
                     <h2 style={{color:'darkslategray',marginBottom:16}}>{name}</h2>
                     <p><span style={{color:'darkslategray'}}>Brand : </span>{brand}</p>
-                    <h5>{volume+" "+unitOfVolume}</h5>
+                    <p><span style={{color:'darkslategray'}}>Colours : </span>{colours}</p>
+                    <p><span style={{color:'darkslategray'}}>Sizes : </span>{sizes}</p>
+                    {/*<h5>{colours}</h5>*/}
+                    {/*<h5>{sizes}</h5>*/}
                     <h3 style={{display:'inline', fontWeight:'bolder',color:'cadetblue',marginTop:10}}>{"Rs: "+unitPrice+".00"}</h3>
                     {discount !== 0 ? <h5 className="block rounded font-bold uppercase" style={{width:'fit-content',padding:7,fontWeight:600,color:'mediumaquamarine',background:'mintcream',display:'inline',marginLeft:14}}>{discount+"% OFF"}</h5> : null}
                     <div className="input-group product-qty">
@@ -246,12 +268,12 @@ const ModalCart=(props)=>{
                         }}>
                         Tags : 
                     </h6>
-                    <Chip label="Local"
-                          style={{
-                              display:'inline-flex',
-                              backgroundColor:'paleturquoise',
-                              margin:6,
-                          }}/>
+                    {/*<Chip label="Local"*/}
+                    {/*      style={{*/}
+                    {/*          display:'inline-flex',*/}
+                    {/*          backgroundColor:'paleturquoise',*/}
+                    {/*          margin:6,*/}
+                    {/*      }}/>*/}
                     <Chip label={category}
                           style={{
                               display:'inline-flex',

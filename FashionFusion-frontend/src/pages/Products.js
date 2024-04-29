@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import ModalCart from "../components/common/model/ModalCart";
 import Slide from "@mui/material/Slide";
-import HomeService from "../Services/HomeService";
+import ItemService from "../Services/ProductService";
 import ProductsHeader from "../layouts/home/ProductsHeader";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -29,7 +29,7 @@ const Products=(props)=>{
     }, []);
 
     const fetchDetails = async(status)=>{
-        const response = await HomeService.fetchItems(status);
+        const response = await ItemService.fetchItems(status);
 
         if (response.status === 200){
             setPosts([...response.data]);
@@ -69,7 +69,7 @@ const Products=(props)=>{
     }
 
     const sort = async (order)=>{
-        const responseAsc = await HomeService.fetchItemsByOrder(status,order)
+        const responseAsc = await ItemService.fetchItemsByOrder(status,order)
         if (responseAsc.status === 200){
             setPosts([...responseAsc.data]);
             setItemLength(responseAsc.data.length)
@@ -109,7 +109,7 @@ const Products=(props)=>{
                                 <div className="swiper-wrapper">
                                     <Box sx={{ flexGrow: 1 }} >
                                         <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }} >
-                                            {posts.slice(0, itemsToShow).map(({_id,image,name,unit_of_volume,unit_price,volume}, index) =>(
+                                            {posts.slice(0, itemsToShow).map(({_id,image,name,colours,unit_price,sizes,brand}, index) =>(
                                                 <Grid item xs={4} lg={2.4} md={2.4}  key={index} >
                                                     <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(_id)}>
                                                         <div className="product-item">
@@ -120,7 +120,7 @@ const Products=(props)=>{
                                                                 </a>
                                                             </figure>
                                                             <h3>{name}</h3>
-                                                            <span className="qty">{volume+" "+unit_of_volume}</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
+                                                            <span className="qty">{brand}</span><span className="rating"><svg width="24" height="24" className="text-primary"><use xlinkHref="#star-solid"></use></svg> 4.5</span>
                                                             <span className="price">{"Rs "+unit_price+".00"}</span>
                                                             <div className="d-flex align-items-center justify-content-between">
 

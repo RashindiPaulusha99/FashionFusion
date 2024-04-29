@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import FormHelperText from '@mui/material/FormHelperText';
 import image from '../assets/images/fashion/ShopEx-image.jpg';
 import {useHistory} from "react-router-dom";
-import HomeService from "../Services/HomeService";
+import UserService from "../Services/UserService";
 import SnackBar from "../components/common/alert/SnackBar";
 import { useSelector, useDispatch } from 'react-redux';
 import { login_Actions } from '../store/action/login_action';
@@ -71,11 +71,13 @@ const Login=()=>{
             setShowErrorPassword(true)
             setShowErrorEmail(false)
         }else {
-            const  response = await HomeService.userLogin(email,password);
+            const  response = await UserService.userLogin(email,password);
 
             if (response.status === 200 && response.data !== null){
 
-                dispatch(login_Actions.login({ id: response.data._id }));
+                // dispatch(login_Actions.login({ id: response.data._id }));
+
+                localStorage.setItem("userId",response.data._id)
 
                 if (response.data.role === "USER"){
                     setSeverity("success")

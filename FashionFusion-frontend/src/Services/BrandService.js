@@ -1,10 +1,11 @@
 import axios from "../data/axios";
 
-class HomeService {
+class BrandService {
 
-    saveCart = async (data) =>{
+    fetchBrand = async () =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.post('/cart/save',data)
+
+            axios.get('brand/getAll')
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -14,9 +15,9 @@ class HomeService {
         return await promise
     }
 
-    updateCart = async (id,data) =>{
+    saveBrand = async (data) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.put(`/cart/update/${id}`,data)
+            axios.post('/brand/save',data)
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -26,9 +27,9 @@ class HomeService {
         return await promise
     }
 
-    getCart = async (id) =>{
+    deleteBrand = async (id) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.get('/cart/get/userBy/'+id)
+            axios.delete('/brand/delete/'+id)
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -38,22 +39,11 @@ class HomeService {
         return await promise
     }
 
-    getACart = async (id) =>{
-        const promise = new Promise((resolve, reject) =>{
-            axios.get('/cart/get/'+id,{
-            })
-                .then((res) =>{
-                    return resolve(res)
-                }).catch((error) =>{
-                return resolve(error)
-            })
-        })
-        return await promise
-    }
+    fetchAllBrands = async ()=>{
 
-    deleteCart = async (id) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.delete('/cart/delete/'+id,{
+
+            axios.get('/brand/getAll/brands',{
             })
                 .then((res) =>{
                     return resolve(res)
@@ -64,9 +54,12 @@ class HomeService {
         return await promise
     }
 
-    savePayment = async (data) =>{
+    fetchABrand = async (id)=>{
+
         const promise = new Promise((resolve, reject) =>{
-            axios.post('/payment/save',data)
+
+            axios.get('/brand/get/'+id,{
+            })
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -76,9 +69,9 @@ class HomeService {
         return await promise
     }
 
-    getAllPayments = async () =>{
+    updateBrand = async (id,data) =>{
         const promise = new Promise((resolve, reject) =>{
-            axios.get('/payment/getAll')
+            axios.put(`/brand/update/${id}`,data)
                 .then((res) =>{
                     return resolve(res)
                 }).catch((error) =>{
@@ -87,21 +80,6 @@ class HomeService {
         })
         return await promise
     }
-
-    virtualTryOn = async (data) => {
-
-        const promise = new Promise((resolve, reject) =>{
-            axios.post('/cart/try',data)
-                .then((res) =>{
-                    return resolve(res)
-                }).catch((error) =>{
-                return resolve(error)
-            })
-        })
-        return await promise
-    }
-
-
 }
 
-export default new HomeService();
+export default new BrandService();

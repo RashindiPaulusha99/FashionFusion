@@ -8,11 +8,11 @@ import HeaderIcons from "../layouts/home/HeaderIcons";
 import Header from "../layouts/home/Header";
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import HomeService from "../Services/HomeService";
+import ItemService from "../Services/ProductService";
 import Button from '@mui/material/Button';
 import DeleteModal from "../components/common/model/DeleteModal";
 import {useHistory} from "react-router-dom";
 import { withRouter } from 'react-router-dom';
-import {useSelector} from "react-redux";
 
 const Cart = (props) => {
 
@@ -27,7 +27,6 @@ const Cart = (props) => {
     const [imageDataMap, setImageDataMap] = useState({});
     const [volumeDataMap, setVolumeDataMap] = useState({});
     const [open, setOpen] = useState(false);
-    const userData = useSelector((state) => state.login.isLogged);
 
     const history = useHistory();
 
@@ -36,7 +35,7 @@ const Cart = (props) => {
     },[])
 
     const handleCart=async ()=>{
-        const response = await HomeService.getCart(userData.id);
+        const response = await HomeService.getCart(localStorage.getItem("userId"));
 
         if (response.status === 200){
             setPosts([...response.data])
@@ -65,12 +64,12 @@ const Cart = (props) => {
     };
 
     const handleGetImage=async (id)=>{
-        const response = await HomeService.fetchItem(id);
+        const response = await ItemService.fetchItem(id);
         return response.data.image.data.data
     }
 
     const handleGetVolume=async (id)=>{
-        const response = await HomeService.fetchItem(id);
+        const response = await ItemService.fetchItem(id);
         return response.data.volume + response.data.unit_of_volume
     }
 
@@ -103,7 +102,7 @@ const Cart = (props) => {
         };
 
         fetchImageData();
-        fetchVolumeData();
+        // fetchVolumeData();
     }, [posts]);
 
     const openHomePage=()=>{

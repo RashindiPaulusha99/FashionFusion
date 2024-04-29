@@ -16,13 +16,12 @@ const Header=(props)=>{
     const [anchorEl2, setAnchorEl2] = useState(null);
     const [cart, setCart] = useState(0);
     const [userId, setUserId] = useState('');
-    const userData = useSelector((state) => state.login.isLogged);
 
     const history = useHistory();
 
     useEffect(()=>{
         handleCartSize();
-        setUserId(userData.id)
+        setUserId(localStorage.getItem("userId"));
     })
 
     const opens = Boolean(anchorEl);
@@ -71,6 +70,12 @@ const Header=(props)=>{
     const  handleOpenServices=()=>{
         history.push({
             pathname:'/service'
+        });
+    }
+
+    const  handleOpenTry=()=>{
+        history.push({
+            pathname:'/try'
         });
     }
 
@@ -185,6 +190,9 @@ const Header=(props)=>{
                                             </li>
                                             <li className="nav-item dropdown nav" onClick={handleOpenAbout}>
                                                 <a  className="nav-link">About Us</a>
+                                            </li>
+                                            <li className="nav-item dropdown nav" onClick={handleOpenTry}>
+                                                <a  className="nav-link">Try On</a>
                                             </li>
                                             <li className="nav-item" onClick={handleOpenBlogs}>
                                                 <a  className="nav-link nav">Blogs</a>

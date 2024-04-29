@@ -15,6 +15,7 @@ import Box from '@mui/material/Box';
 import {useHistory, withRouter} from 'react-router-dom';
 import Button from "@mui/material/Button";
 import HomeService from "../Services/HomeService";
+import ItemService from "../Services/ProductService";
 import SnackBar from "../components/common/alert/SnackBar";
 import {useSelector} from "react-redux";
 
@@ -74,7 +75,6 @@ const Payment=(props)=>{
     const [state, setState] = useState(false);
     const [severity, setSeverity] = useState('warning');
     const [message, setMessage] = useState('All fields are required!');
-    const userData = useSelector((state) => state.login.isLogged);
 
     const history = useHistory();
 
@@ -106,16 +106,19 @@ const Payment=(props)=>{
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1;
             const year = currentDate.getFullYear();
-            const formattedDate = `${day}-${month}-${year}`;
+            const hour = currentDate.getHours();
+            const minute = currentDate.getMinutes();
+            const second = currentDate.getSeconds();
+            const formattedDate = `${day}-${month}-${year} ${hour}:${minute}:${second}`;
 
             const data = {
-                "user_Id":userData.id,
+                "user_Id":localStorage.getItem("userId"),
                 "cart":items,
                 "payments":total,
-                "payment_Date":formattedDate
+                "paymentDateTime":formattedDate
             }
 
-            const response  = await HomeService.savePayment(data)
+            const response  = await HomeService.savePayment(data);
 
             if (response.status === 200){
                 setSeverity("success")
@@ -145,11 +148,11 @@ const Payment=(props)=>{
 
     const deductQty=async (items)=>{
         for (var itemsKey of items.cart) {
-            const response = await HomeService.fetchItem(itemsKey.item_Id)
+            const response = await ItemService.fetchItem(itemsKey.item_Id)
             const qty={
                 "qty_on_hand":response.data.qty_on_hand - itemsKey.qty
             }
-            const qtyOnHand = await HomeService.updateQty(itemsKey.item_Id,qty)
+            const qtyOnHand = await ItemService.updateQty(itemsKey.item_Id,qty)
         }
     }
 
