@@ -23,7 +23,7 @@ import retry
 
 app = Flask(__name__)
 
-os.environ["REPLICATE_API_TOKEN"] = "r8_TcblMpO6gPhVsoTi5glMwaKm1q74yjn1xqaH8"
+os.environ["REPLICATE_API_TOKEN"] = "TOKEN"
 machine_number = 0
 load_dotenv()
 localStorage = localStoragePy('OutfitAnyone', 'text')
@@ -42,7 +42,7 @@ def get_tryon_result(model_image, garment1, garment2):
     encoded_garment1 = base64.b64encode(encoded_garment1).decode('utf-8')
 
     input = {
-        "garm_img": "https://calvinklein.scene7.com/is/image/CalvinKlein/51477625_001_alternate6?wid=1080&hei=1422&qlt=80%2C0&resMode=sharp2&op_usm=0.9%2C1.0%2C8%2C0&iccEmbed=0&fmt=webp",
+        "garm_img": f"data:application/octet-stream;base64,{encoded_garment1}",
         "human_img": f"data:application/octet-stream;base64,{encoded_model}",
         "garment_des": "apparel"
     }  
@@ -80,10 +80,10 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                 example_top = gr.Examples(inputs=garment_top,
                                           examples_per_page=5,
                                           examples=getImageUrl(api_url_upper))
-                garment_down = gr.Image(sources='clipboard', type="numpy", label="lower garment")
-                example_down = gr.Examples(inputs=garment_down,
-                                           examples_per_page=5,
-                                           examples=getImageUrl(api_url_lower))
+                # garment_down = gr.Image(sources='clipboard', type="numpy", label="lower garment")
+                # example_down = gr.Examples(inputs=garment_down,
+                #                            examples_per_page=5,
+                #                            examples=getImageUrl(api_url_lower))
 
             run_button = gr.Button(value="Run")
         with gr.Column():
@@ -93,7 +93,7 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                              inputs=[
                                     init_image,
                                     garment_top,
-                                    garment_down,
+                                    # garment_down,
                                     ], 
                              outputs=[gallery],
                              concurrency_limit=2)
