@@ -109,14 +109,14 @@ const Products=(props)=>{
                                 <div className="swiper-wrapper">
                                     <Box sx={{ flexGrow: 1 }} >
                                         <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }} >
-                                            {posts.slice(0, itemsToShow).map(({_id,image,name,colours,unit_price,sizes,brand}, index) =>(
+                                            {posts.slice(0, itemsToShow).map(({_id,item_image,name,colours,unit_price,sizes,brand}, index) =>(
                                                 <Grid item xs={4} lg={2.4} md={2.4}  key={index} >
                                                     <div className="col" style={{cursor:'pointer'}} onClick={(e)=> handleClickOpen(_id)}>
                                                         <div className="product-item">
 
                                                             <figure>
                                                                 <a title="Product Title">
-                                                                    <img src={'data:image/jpeg;base64,'+arrayBufferToBase64(image.data.data)} alt='thumb bananas' className="tab-image"/>
+                                                                    <img src={item_image} alt='thumb bananas' className="tab-image"/>
                                                                 </a>
                                                             </figure>
                                                             <h3>{name}</h3>

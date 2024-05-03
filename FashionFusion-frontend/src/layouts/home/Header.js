@@ -74,9 +74,10 @@ const Header=(props)=>{
     }
 
     const  handleOpenTry=()=>{
-        history.push({
-            pathname:'/try'
-        });
+        // history.push({
+        //     pathname:'/http://127.0.0.1:7860'
+        // });
+        window.open("http://127.0.0.1:7860", "_blank");
     }
 
     const  handleOpenContact=()=>{

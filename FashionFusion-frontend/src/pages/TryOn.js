@@ -76,22 +76,22 @@ const TryOn=(props)=>{
 
         // data.append('clothImage', test(itemImage));
 
-        const options = {
-            method: 'POST',
-            url: 'https://virtual-try-on2.p.rapidapi.com/clothes-virtual-tryon',
-            headers: {
-                'X-RapidAPI-Key': '9cd612fd8cmsh915a608e19ca7b9p177afdjsn67d4a0b031d4',
-                'X-RapidAPI-Host': 'virtual-try-on2.p.rapidapi.com'
-            },
-            data: data
-        };
+        // const options = {
+        //     method: 'POST',
+        //     url: 'https://virtual-try-on2.p.rapidapi.com/clothes-virtual-tryon',
+        //     headers: {
+        //         'X-RapidAPI-Key': '9cd612fd8cmsh915a608e19ca7b9p177afdjsn67d4a0b031d4',
+        //         'X-RapidAPI-Host': 'virtual-try-on2.p.rapidapi.com'
+        //     },
+        //     data: data
+        // };
 
-        try {
-            const response = await axios.request(options);
-            console.log(response.data);
-        } catch (error) {
-            console.error(error);
-        }
+        // try {
+        //     const response = await axios.request(options);
+        //     console.log(response.data);
+        // } catch (error) {
+        //     console.error(error);
+        // }
 
         // const base64Image = await fileToBase64(file);
         // const data={
@@ -160,7 +160,7 @@ const TryOn=(props)=>{
             <Header/>
             <HeaderIcons/>
             <div style={{width:'100%',padding:24}}>
-                <iframe src='http://127.0.0.1:7860' width="100%" height="500px" frameBorder="0"></iframe>
+                {/*<iframe src='http://127.0.0.1:7860' width="100%" height="500px" frameBorder="0"></iframe>*/}
                 {/*<Box sx={{ flexGrow: 1 }}>*/}
                 {/*    <Grid container spacing={2}>*/}
                 {/*        <Grid item xs={12} md={4} lg={4} >*/}
