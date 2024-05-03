@@ -23,7 +23,7 @@ import retry
 
 app = Flask(__name__)
 
-os.environ["REPLICATE_API_TOKEN"] = "r8_ImbW66hCVSAH1rFeoZPD8kmCFXUVil40KIXTB"
+os.environ["REPLICATE_API_TOKEN"] = "token"
 machine_number = 0
 load_dotenv()
 localStorage = localStoragePy('OutfitAnyone', 'text')
