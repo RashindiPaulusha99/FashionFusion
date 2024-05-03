@@ -99,7 +99,7 @@ const Login=()=>{
 
             }else {
                 setSeverity("error")
-                setMessage("Logged Failed!")
+                setMessage("Invalid Email or Password!")
                 handleClick()
                 setShowErrorEmail(false)
                 setShowErrorPassword(false)

@@ -56,24 +56,22 @@ const AboutPage=()=>{
             </div>
             <div style={{position:"relative",marginLeft:40,marginRight:40,marginTop:40}}>
                 <div style={{display:"flex",justifyContent:"center",flexDirection:"column",}}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Corporis cupiditate dolore dolores enim libero magni nostrum temporibus voluptatem.
-                        Autem beatae consequuntur doloribus enim facilis fugit minus molestiae omnis temporibus voluptates?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Consequatur excepturi harum nemo pariatur, praesentium rerum?
-                        Adipisci est exercitationem maxime neque nobis placeat possimus sint suscipit! Facere quidem ratione tempore ullam.
+                    <p>Our journey began with a simple yet profound vision: 
+                        to revolutionize the way people shop for clothing. Guided by a passion 
+                        for innovation and a commitment to excellence, we embarked on a mission 
+                        to create a virtual try-on experience that seamlessly merges technology
+                         with fashion.
                     </p>
                     <br/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Corporis cupiditate dolore dolores enim libero magni nostrum temporibus voluptatem.
-                        Autem beatae consequuntur doloribus enim facilis fugit minus molestiae omnis temporibus voluptates?
-                        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong>
-                        Consequatur excepturi harum nemo pariatur, praesentium rerum?
-                        Adipisci est exercitationem maxime neque nobis placeat possimus sint suscipit! Facere quidem ratione tempore ullam.
+                    <p>Since our inception, we have tirelessly pursued the perfect balance 
+                        between cutting-edge technology and user-centric design. 
+            
+                        <strong>cutting-edge technology and user-centric design. </strong>
+                        Through continuous research and development, we've refined our 
+                        platform to offer unparalleled convenience and accuracy in virtual
+                        garment visualization.
                     </p>
-                    <p style={{marginBottom:40}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Corporis cupiditate dolore dolores enim libero magni nostrum temporibus voluptatem.
-                        Autem beatae consequuntur doloribus enim facilis fugit minus molestiae omnis temporibus voluptates?
+                    <p style={{marginBottom:40}}>Since our inception, we have tirelessly pursued the perfect balance between cutting-edge technology and user-centric design. Through continuous research and development, we've refined our platform to offer unparalleled convenience and accuracy in virtual garment visualization.
                     </p>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
@@ -85,17 +83,13 @@ const AboutPage=()=>{
                             </Grid>
                         </Grid>
                     </Box>
-                    <p style={{marginTop:40}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Corporis cupiditate dolore dolores enim libero magni nostrum temporibus voluptatem.
-                        Autem beatae consequuntur doloribus enim facilis fugit minus molestiae omnis temporibus voluptates?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Consequatur excepturi harum nemo pariatur, praesentium rerum?
-                        Adipisci est exercitationem maxime neque nobis placeat possimus sint suscipit! Facere quidem ratione tempore ullam.
+                    <p style={{marginTop:40}}>At the heart of our journey lies a dedication to empowering our customers with confidence and convenience. With our virtual try-on solution, shoppers can explore a vast array of styles and sizes from the comfort of their own homes, eliminating the uncertainty and inconvenience of traditional fitting rooms.
                     </p>
                     <br/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Corporis cupiditate dolore dolores enim libero magni nostrum temporibus voluptatem.
-                        Autem beatae consequuntur doloribus enim facilis fugit minus molestiae omnis temporibus voluptates?
+                    <p>As we continue on our journey, we remain steadfast in our commitment to innovation and customer satisfaction. With each new feature and enhancement, we strive to redefine the boundaries of online shopping, making it more immersive, interactive, and enjoyable than ever before.
+                    </p>
+                    <br/>
+                    <p>Join us on this exciting journey as we shape the future of fashion retailing, one virtual fitting room experience at a time.
                     </p>
                 </div>
             </div>

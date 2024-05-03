@@ -65,7 +65,8 @@ const Cart = (props) => {
 
     const handleGetImage=async (id)=>{
         const response = await ItemService.fetchItem(id);
-        return response.data.image.data.data
+    
+        return response.data.item_image
     }
 
     const handleGetVolume=async (id)=>{
@@ -77,6 +78,7 @@ const Cart = (props) => {
         // Fetch all the image data for each item_Id in posts
         const fetchImageData = async () => {
             const promises = posts.map(({ item_Id }) => handleGetImage(item_Id));
+            
             const imageDataList = await Promise.all(promises);
 
             // Create a map of item_Id to imageData for easy access
@@ -90,15 +92,15 @@ const Cart = (props) => {
 
         const fetchVolumeData = async () => {
             const promises = posts.map(({ item_Id }) => handleGetVolume(item_Id));
-            const volumeDataList = await Promise.all(promises);
+            // const volumeDataList = await Promise.all(promises);
 
-            // Create a map of item_Id to imageData for easy access
-            const volumeDataMap = posts.reduce((acc, { item_Id }, index) => {
-                acc[item_Id] = volumeDataList[index];
-                return acc;
-            }, {});
+            // // Create a map of item_Id to imageData for easy access
+            // const volumeDataMap = posts.reduce((acc, { item_Id }, index) => {
+            //     acc[item_Id] = volumeDataList[index];
+            //     return acc;
+            // }, {});
 
-            setVolumeDataMap(volumeDataMap);
+            setVolumeDataMap(promises);
         };
 
         fetchImageData();
@@ -137,7 +139,7 @@ const Cart = (props) => {
 
                                     <Grid container spacing={1} style={{marginBottom:18,boxShadow: 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px',borderRadius:8,cursor:'pointer'}}>
                                         <Grid item xs={12} md={2} lg={2} style={{display:'flex',justifyContent:'center',}}>
-                                            <img src={'data:image/jpeg;base64,'+arrayBufferToBase64(imageDataMap[item_Id])} alt="item" style={{margin:10,width:99,height:99,boxShadow: 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px',borderRadius:5}}/>
+                                            <img src={imageDataMap[item_Id]} alt="item" style={{margin:10,width:99,height:99,boxShadow: 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px',borderRadius:5}}/>
                                         </Grid>
                                         <Grid item xs={12} md={4} lg={4} style={{display:'flex',justifyContent:'flex-start'}}>
                                             <p style={{margin:10,color:'black',fontWeight:'bold'}}>

@@ -56,9 +56,9 @@ const Blog=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit aliquet</a>
+                                            <a href="#" className="text-decoration-none">Trendsetters' Corner</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Stay ahead of the curve with our fashion blog, where style meets substance. Dive into the latest trends, expert tips, and insider insights to elevate your wardrobe game.</p>
                                     </div>
                                 </div>
                             </article>
@@ -77,9 +77,9 @@ const Blog=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit aliquet</a>
+                                            <a href="#" className="text-decoration-none">Fashion Fusion Insights</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Unlock the secrets of seamless style integration! Explore our blog for curated content on AI-enhanced fashion fusion, virtual try-ons, and cutting-edge tech trends shaping the industry.</p>
                                     </div>
                                 </div>
                             </article>
@@ -98,9 +98,9 @@ const Blog=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit aliquet</a>
+                                            <a href="#" className="text-decoration-none">Style Savvy Chronicles</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Discover the stories behind the looks! Delve into our fashion narratives, from behind-the-scenes glimpses to inspirational journeys, and embark on a sartorial adventure like no other.</p>
                                     </div>
                                 </div>
                             </article>
@@ -119,9 +119,9 @@ const Blog=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit aliquet</a>
+                                            <a href="#" className="text-decoration-none">Fit & Fabulous Finds</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Find your fit, find your flair! Navigate the world of fashion with confidence as we share insights on sizing, fit tips, and personalized styling advice tailored just for you.</p>
                                     </div>
                                 </div>
                             </article>
@@ -140,9 +140,9 @@ const Blog=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit aliquet</a>
+                                            <a href="#" className="text-decoration-none">Chic & Sustainable</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Eco-friendly meets haute couture! Dive into our blog for a sustainable fashion journey, where we explore eco-conscious brands, ethical practices, and mindful style choices.</p>
                                     </div>
                                 </div>
                             </article>

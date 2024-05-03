@@ -44,9 +44,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Fashion Fusion Insights</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Unlock the secrets of seamless style integration! Explore our blog for curated content on AI-enhanced fashion fusion, virtual try-ons, and cutting-edge tech trends shaping the industry.</p>
                                     </div>
                                 </div>
                             </article>
@@ -67,9 +67,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi</a>
+                                            <a href="#" className="text-decoration-none">Trendsetters' Corner</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Stay ahead of the curve with our fashion blog, where style meets substance. Dive into the latest trends, expert tips, and insider insights to elevate your wardrobe game.</p>
                                     </div>
                                 </div>
                             </article>
@@ -90,9 +90,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Style Savvy Chronicles</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Discover the stories behind the looks! Delve into our fashion narratives, from behind-the-scenes glimpses to inspirational journeys, and embark on a sartorial adventure like no other.</p>
                                     </div>
                                 </div>
                             </article>
@@ -113,9 +113,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Fit & Fabulous Finds</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Find your fit, find your flair! Navigate the world of fashion with confidence as we share insights on sizing, fit tips, and personalized styling advice tailored just for you.</p>
                                     </div>
                                 </div>
                             </article>
@@ -136,9 +136,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Chic & Sustainable</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Eco-friendly meets haute couture! Dive into our blog for a sustainable fashion journey, where we explore eco-conscious brands, ethical practices, and mindful style choices.</p>
                                     </div>
                                 </div>
                             </article>
@@ -159,9 +159,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Runway Report</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Front-row access to the latest trends! Immerse yourself in our fashion forecast, where we decode runway looks, predict upcoming styles, and bring high fashion to your fingertips.</p>
                                     </div>
                                 </div>
                             </article>
@@ -182,9 +182,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Accessory Avenue</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>It's all in the details! Explore our blog for insights on accessorizing like a pro, from statement pieces to subtle accents, and elevate your ensemble with finesse</p>
                                     </div>
                                 </div>
                             </article>
@@ -205,9 +205,9 @@ const BlogPage=()=>{
                                     </div>
                                     <div className="post-header">
                                         <h3 className="post-title">
-                                            <a href="#" className="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipi elit</a>
+                                            <a href="#" className="text-decoration-none">Fashion Forward Focus</a>
                                         </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                        <p>Set your sights on style evolution! Join us on a journey through fashion's ever-changing landscape, where innovation, creativity, and individuality take center stage.</p>
                                     </div>
                                 </div>
                             </article>

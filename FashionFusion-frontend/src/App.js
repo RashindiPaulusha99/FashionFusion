@@ -29,9 +29,9 @@ function App() {
           <Route path='/Register'>
               <Register/>
           </Route>
-          <Route path='/profile'>
+          {/* <Route path='/profile'>
               <Profile/>
-          </Route>
+          </Route> */}
           <Route path='/about'>
               <AboutPage/>
           </Route>

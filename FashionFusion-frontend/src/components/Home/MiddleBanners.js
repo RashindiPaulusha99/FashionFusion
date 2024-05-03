@@ -12,8 +12,8 @@ const MiddleBanners=()=>{
                             <div className="banner-content p-5">
 
                                 <div className="categories text-primary fs-3 fw-bold">Upto 25% Off</div>
-                                <h3 className="banner-title">Lorem ipsum</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                                <h3 className="banner-title">Discover Perfect Pants</h3>
+                                <p>Elevate Your Wardrobe with Style and Comfort.</p>
                                 <a href="#" className="btn btn-dark text-uppercase">Show Now</a>
 
                             </div>
@@ -25,8 +25,8 @@ const MiddleBanners=()=>{
                             <div className="banner-content p-5">
 
                                 <div className="categories text-primary fs-3 fw-bold">Upto 25% Off</div>
-                                <h3 className="banner-title">Lorem ipsum</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisi</p>
+                                <h3 className="banner-title">Experience Comfort and Style</h3>
+                                <p>Explore our Range of Leggings Today.</p>
                                 <a href="#" className="btn btn-dark text-uppercase">Show Now</a>
 
                             </div>

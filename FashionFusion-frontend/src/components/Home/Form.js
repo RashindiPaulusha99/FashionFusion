@@ -19,8 +19,7 @@ const Form=()=>{
                                     <h2 className="section-title display-4">Get <span className="text-primary">25% Discount</span> on
                                         your first purchase</h2>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst amet, metus, sit
-                                    massa posuere maecenas. At tellus ut nunc amet vel egestas.</p>
+                                <p>New to our store? Start your style journey with an exclusive offer! Get 25% off your first purchase and step into fashion-forward savings.</p>
                             </div>
                             <div className="col-md-6 p-5">
                                 <form>

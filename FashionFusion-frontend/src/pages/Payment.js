@@ -100,6 +100,22 @@ const Payment=(props)=>{
             setSeverity("warning")
             setMessage("All fields are required!")
             handleClick()
+        }else if(!/^\d{5}$/.test(postalcode)){
+            setSeverity("warning")
+            setMessage("Postal code must be 5 digits");
+            handleClick();
+        }else if(!/^\d{10}$/.test(mobile)){
+            setSeverity("warning")
+            setMessage("Invalid mobile number");
+            handleClick();
+        }else if(!/^\d{16}$/.test(cardNumber)){
+            setSeverity("warning")
+            setMessage("Invalid card number");
+            handleClick();
+        }else if(!/^\d{3}$/.test(securityCode)){
+            setSeverity("warning")
+            setMessage("Security code must be 3 digits");
+            handleClick();
         }else {
 
             const currentDate = new Date();
@@ -200,7 +216,7 @@ const Payment=(props)=>{
                                 </div>
                                 <div className="col mb-4 w-50">
                                     <label style={{fontSize:14}} htmlFor="postalcode" className="form-label">Postal Code</label>
-                                    <input type="text" className="form-control" id="postalcode" value={postalcode} onChange={(e)=>{
+                                    <input type="number" className="form-control" id="postalcode" value={postalcode} onChange={(e)=>{
                                         setPostalCode(e.target.value)
                                     }}/>
                                 </div>
@@ -233,7 +249,7 @@ const Payment=(props)=>{
                                 </div>
                                 <div className="col mb-4 w-50">
                                     <label style={{fontSize:14}} htmlFor="contact" className="form-label">Mobile Number</label>
-                                    <input type="text" className="form-control" id="contact" value={mobile} onChange={(e)=>{
+                                    <input type="number" className="form-control" id="contact" value={mobile} onChange={(e)=>{
                                         setMobile(e.target.value)
                                     }}/>
                                 </div>
@@ -266,7 +282,7 @@ const Payment=(props)=>{
                             <div className='row'>
                                 <div className="col col-lg-4 col-md-4 col-sm-12 mb-2 w-50">
                                     <label style={{fontSize:14}} htmlFor="cardnumber" className="form-label">Card Number</label>
-                                    <input type="text" className="form-control" id="cardnumber" value={cardNumber} onChange={(e)=>{
+                                    <input type="number" className="form-control" id="cardnumber" value={cardNumber} onChange={(e)=>{
                                         setCardNumber(e.target.value)
                                     }}/>
                                 </div>
@@ -322,7 +338,7 @@ const Payment=(props)=>{
                             <div className='row'>
                                 <div className="col col-lg-2 col-md-2 col-sm-12 mb-2 w-25">
                                     <label style={{fontSize:14}} htmlFor="code" className="form-label">Security code</label>
-                                    <input type="text" style={{width: '37%'}} className="form-control" id="code" value={securityCode} onChange={(e)=>{
+                                    <input type="number" style={{width: '37%'}} className="form-control" id="code" value={securityCode} onChange={(e)=>{
                                         setSecurityCode(e.target.value)
                                     }}/>
                                     <p style={{position:'absolute',bottom:10,left:150,fontSize:13}}>3 digits</p>

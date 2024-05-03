@@ -15,7 +15,7 @@ const Services=()=>{
                                 <div className="col-md-10">
                                     <div className="card-body p-0">
                                         <h5 style={{color:'black'}}>Free Delivery</h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                                        <p className="card-text">Seamless shopping, free delivery.</p>
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@ const Services=()=>{
                                 <div className="col-md-10">
                                     <div className="card-body p-0">
                                         <h5 style={{color:'black'}}>Secure Payment</h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                                        <p className="card-text">Safe, secure checkout always.</p>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ const Services=()=>{
                                 <div className="col-md-10">
                                     <div className="card-body p-0">
                                         <h5 style={{color:'black'}}>Quality Guarantee</h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                                        <p className="card-text">Quality assured, always.</p>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@ const Services=()=>{
                                 <div className="col-md-10">
                                     <div className="card-body p-0">
                                         <h5 style={{color:'black'}}>Guaranteed Savings</h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                                        <p className="card-text">Save big, shop smart.</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ const Services=()=>{
                                 <div className="col-md-10">
                                     <div className="card-body p-0">
                                         <h5 style={{color:'black'}}>Daily Offers</h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                                        <p className="card-text">Daily deals, unbeatable prices.</p>
                                     </div>
                                 </div>
                             </div>

@@ -48,9 +48,9 @@ const HeaderBanner=()=>{
                                             <div className="swiper-slide">
                                                 <div className="row banner-content p-5">
                                                     <div className="content-wrapper col-md-7">
-                                                        <div className="categories mb-3 pb-3">Lorem ipsum</div>
-                                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
+                                                        <div className="categories mb-3 pb-3">Try Now</div>
+                                                        <h3 className="banner-title">Virtual Try On Capability</h3>
+                                                        <p>Experience virtual fashion at its best with our cutting-edge Virtual Try-On Capability.</p>
                                                         <a href="#g" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop collection</a>
                                                     </div>
                                                     <div className="img-wrapper col-md-5">
@@ -61,9 +61,9 @@ const HeaderBanner=()=>{
                                             <div className="swiper-slide">
                                                 <div className="row banner-content p-5">
                                                     <div className="content-wrapper col-md-7">
-                                                        <div className="categories mb-3 pb-3">Lorem ipsum</div>
-                                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
+                                                        <div className="categories mb-3 pb-3">Visualize Instantly</div>
+                                                        <h3 className="banner-title">Real-Time Visualization</h3>
+                                                        <p>Step into the future of fashion with our Real-Time Visualization technology.</p>
                                                         <a href="#g" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop collection</a>
                                                     </div>
                                                     <div className="img-wrapper col-md-5">
@@ -74,9 +74,9 @@ const HeaderBanner=()=>{
                                             <div className="swiper-slide">
                                                 <div className="row banner-content p-5">
                                                     <div className="content-wrapper col-md-7">
-                                                        <div className="categories mb-3 pb-3">Lorem ipsum</div>
-                                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
+                                                        <div className="categories mb-3 pb-3">Perfect Fit</div>
+                                                        <h3 className="banner-title">Measurement And Fit Assistance</h3>
+                                                        <p>Experience perfect fit every time with our Measurement And Fit Assistance feature.</p>
                                                         <a href="#g" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">shop collection</a>
                                                     </div>
                                                     <div className="img-wrapper col-md-5">
@@ -92,9 +92,9 @@ const HeaderBanner=()=>{
                             <div className="banner-ad bg-success block-2 banner-ad-image1">
                                 <div className="row banner-content p-5">
 
-                                    <div className="content-wrapper col-md-7">
-                                        <div className="categories sale mb-3 pb-3">Lorem ipsum</div>
-                                        <h3 className="banner-title">Lorem ipsum dolor sit amet</h3>
+                                    <div className="content-wrapper col-md-12">
+                                        <div className="categories sale mb-3 pb-3">Upper Garments</div>
+                                        <h3 className="banner-title"> Discover Your Perfect Look Today!</h3>
                                         <a href="#g" className="d-flex align-items-center nav-link">shop collection <svg width="24" height="24"><use xlinkHref="#arrow-right"></use></svg></a>
                                     </div>
 
@@ -104,9 +104,9 @@ const HeaderBanner=()=>{
                             <div className="banner-ad bg-danger block-3 banner-ad-image2">
                                 <div className="row banner-content p-5">
 
-                                    <div className="content-wrapper col-md-7">
-                                        <div className="categories sale mb-3 pb-3">Lorem ipsum</div>
-                                        <h3 className="item-title">Lorem ipsum dolor sit amet</h3>
+                                    <div className="content-wrapper col-md-12">
+                                        <div className="categories sale mb-3 pb-3">Lower Garments</div>
+                                        <h3 className="item-title"> Find Your Ideal Fit Now!</h3>
                                         <a href="#g" className="d-flex align-items-center nav-link">shop collection <svg width="24" height="24"><use xlinkHref="#arrow-right"></use></svg></a>
                                     </div>
 
