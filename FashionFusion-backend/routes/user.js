@@ -14,7 +14,7 @@ router.post('/register',async (req,res) => {
         email:req.body.email,
         password:req.body.password,
         role:req.body.role,
-        addedDate:req.body.addedDate,
+        createdDateTime:req.body.createdDateTime,
     })
 
     try {
@@ -69,7 +69,7 @@ router.put('/update/:id',async (req,res) =>{
         get.email = req.body.email
         get.password = req.body.password
         get.role = req.body.role
-        get.addedDate = req.body.addedDate
+        get.createdDateTime = req.body.createdDateTime
         const response = await get.save()
 
         res.json(response)

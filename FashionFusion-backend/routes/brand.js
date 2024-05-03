@@ -37,6 +37,7 @@ router.post("/save", upload.single("image"), async (req, res) => {
     const brand = new Brand({
         brand: req.body.brand,
         category: req.body.category,
+        description: req.body.description,
         image: {
             data:fs.readFileSync(req.file.path),
             contentType:'image/png'
@@ -63,6 +64,10 @@ router.put("/update/:id", upload.single("image"), async (req, res) => {
 
         if (req.body.brand) {
             post.brand = req.body.brand;
+        }
+
+        if (req.body.description) {
+            post.description = req.body.description;
         }
 
         if (req.file) {

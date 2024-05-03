@@ -7,13 +7,14 @@ const payment = require('./routes/payment')
 const cart = require('./routes/cart')
 const category = require('./routes/category')
 const brand = require('./routes/brand')
+const preference = require('./routes/preference')
 const Grid = require("gridfs-stream");
-const cors = require('cors'); // Import the cors middleware
+const cors = require('cors');
 
 const app=express()
 const port = 4001
 
-const url = 'mongodb://127.0.0.1/grocery'
+const url = 'mongodb://127.0.0.1/fashionfusion'
 
 mongoose.connect(url, { useNewUrlParser: true })
 const con = mongoose.connection
@@ -36,6 +37,7 @@ app.use('/payment', payment)
 app.use('/cart', cart)
 app.use('/category', category)
 app.use('/brand', brand)
+app.use('/preference', preference)
 
 app.listen(port, () => {
     console.log(`app starting on ${port}`);

@@ -23,6 +23,14 @@ const paymentSchema = new mongoose.Schema({
                 type: Number,
                 required: true
             },
+            colour:{
+                type: String,
+                required: true
+            },
+            size:{
+                type:String,
+                required:true
+            },
             unit_price:{
                 type: Number,
                 required: true
@@ -37,8 +45,8 @@ const paymentSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    payment_Date:{
-        type:Date,
+    paymentDateTime:{
+        type:String,
         required:true
     }
 })

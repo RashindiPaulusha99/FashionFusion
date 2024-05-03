@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const fs = require("fs");
 const multer = require("multer");
-const cors = require('cors'); // Import the cors middleware
+const cors = require('cors');
 
 const Item = require('../models/item.models')
 
@@ -14,9 +14,9 @@ app.use(cors());
 
 require("dotenv").config()
 
-app.use(bodyParser.urlencoded(
-    { extended:true }
-))
+// app.use(bodyParser.urlencoded(
+//     { extended:true }
+// ))
 
 app.use(bodyParser.json())
 
@@ -33,7 +33,52 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-router.post("/save", upload.single("image"), async (req, res) => {
+// router.post("/save", upload.single("image"), async (req, res) => {
+
+//     const coloursArray = req.body.colours.split(',').map(colour => colour.trim());
+
+//     // Create an object to store the colours with their respective indexes
+//     const coloursIndexed = [];
+//     coloursArray.forEach((colour, index) => {
+//         coloursIndexed[index] = colour;
+//     });
+
+//     const sizesArray = req.body.sizes.split(',').map(size => sizes.trim());
+
+
+//     const sizesIndexed = {};
+//     sizesArray.forEach((size, index) => {
+//         sizesIndexed[index] = size;
+//     });
+
+//     const item = new Item({
+//         name:req.body.name,
+//         description:req.body.description,
+//         category:req.body.category,
+//         brand:req.body.brand,
+//         qty_on_hand:req.body.qty_on_hand,
+//         discount:req.body.discount,
+//         colours:coloursIndexed,
+//         sizes:sizesIndexed,
+//         unit_price:req.body.unit_price,
+//         image: {
+//             data:fs.readFileSync(req.file.path),
+//             contentType:'image/png'
+//         },
+//     });
+
+//     try {
+//         const save = await item.save()
+//         res.json(save)
+//     }catch (error) {
+//         res.send('Error : '+error)
+//     }
+// })
+router.post("/save", async (req, res) => {
+
+    console.log(req.body)
+    const coloursArray = req.body.colours.split(',').map(colour => colour.trim());
+    const sizesArray = req.body.sizes.split(',').map(size => size.trim());
 
     const item = new Item({
         name:req.body.name,
@@ -42,13 +87,10 @@ router.post("/save", upload.single("image"), async (req, res) => {
         brand:req.body.brand,
         qty_on_hand:req.body.qty_on_hand,
         discount:req.body.discount,
-        volume:req.body.volume,
-        unit_of_volume:req.body.unit_of_volume,
+        colours:coloursArray,
+        sizes:sizesArray,
         unit_price:req.body.unit_price,
-        image: {
-            data:fs.readFileSync(req.file.path),
-            contentType:'image/png'
-        },
+        item_image:req.body.item_image,
     });
 
     try {
@@ -58,8 +100,10 @@ router.post("/save", upload.single("image"), async (req, res) => {
         res.send('Error : '+error)
     }
 })
-
-router.put("/update/:id", upload.single("image"), async (req, res) => {
+router.put("/update/:id", async (req, res) => {
+    console.log(req.params.id)
+    console.log(await Item.findById(req.params.id))
+    console.log(req.body)
 
     try {
         const postId = req.params.id;
@@ -89,24 +133,28 @@ router.put("/update/:id", upload.single("image"), async (req, res) => {
             post.discount = req.body.discount;
         }
 
-        if (req.body.volume) {
-            post.volume = req.body.volume;
+        if (req.body.colours) {
+            post.colours = req.body.colours;
         }
 
-        if (req.body.unit_of_volume) {
-            post.unit_of_volume = req.body.unit_of_volume;
+        if (req.body.sizes) {
+            post.sizes = req.body.sizes;
         }
 
         if (req.body.unit_price) {
             post.unit_price = req.body.unit_price;
         }
 
-        if (req.file) {
-            post.image = {
-                data: fs.readFileSync(req.file.path),
-                contentType: req.file.mimetype,
-            };
+        if (req.body.item_image) {
+            post.item_image = req.body.item_image;
         }
+
+        // if (req.file) {
+        //     post.image = {
+        //         data: fs.readFileSync(req.file.path),
+        //         contentType: req.file.mimetype,
+        //     };
+        // }
 
         const response = await post.save();
         res.json(response);
@@ -115,7 +163,7 @@ router.put("/update/:id", upload.single("image"), async (req, res) => {
     }
 })
 
-router.put("/updateQty/:id", upload.single("image"), async (req, res) => {
+router.put("/updateQty/:id", async (req, res) => {
 
     const post = await Item.findById(req.params.id)
     post.qty_on_hand=req.body.qty_on_hand
@@ -127,6 +175,41 @@ router.put("/updateQty/:id", upload.single("image"), async (req, res) => {
         res.send('Error : '+error)
     }
 })
+
+router.get('/getAllGarment', async (req, res) => {
+    const categories = ['Trouser', 'Skirt', 'Underwear','Shirt', 'Blouse','Frock'];
+    try {
+        const items = await Item.find({ category: { $in: categories } });
+        const imageUrls = items.map(item => item.item_image);
+        res.json(imageUrls);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching items', message: error.message });
+    }
+});
+
+router.get('/getAllByLowerGarment', async (req, res) => {
+    const categories = ['Trouser', 'Skirt', 'Underwear','Shirt','Frock'];
+    try {
+        const items = await Item.find({ category: { $in: categories } });
+        const imageUrls = items.map(item => item.item_image);
+        res.json(imageUrls);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching items', message: error.message });
+    }
+});
+
+router.get('/getAllByUpperGarment', async (req, res) => {
+    // const categories = ['Shirt', 'Blouse','Frock', 'Underwear'];
+    const categories = ['Shirt'];
+    try {
+        const items = await Item.find({ category: { $in: categories } });
+        const imageUrls = items.map(item => item.item_image);
+        res.json(imageUrls);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching items', message: error.message });
+    }
+});
+
 
 router.get('/getAll/:status',async (req, res) =>{
     try {
