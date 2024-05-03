@@ -23,7 +23,7 @@ import retry
 
 app = Flask(__name__)
 
-os.environ["REPLICATE_API_TOKEN"] = "TOKEN"
+os.environ["REPLICATE_API_TOKEN"] = "token"
 machine_number = 0
 load_dotenv()
 localStorage = localStoragePy('OutfitAnyone', 'text')
@@ -67,7 +67,7 @@ def getImageUrl(api_url):
 with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px !important} ") as demo:
 
     api_url_lower = "http://localhost:4001/item/getAllByLowerGarment"
-    api_url_upper = "http://localhost:4001/item/getAllByUpperGarment"
+    api_url_upper = "http://localhost:4001/item/getAllGarment"
     
     with gr.Row():
         with gr.Column():
@@ -79,7 +79,7 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                 garment_top = gr.Image(sources='clipboard', type="numpy", label="top garment")
                 example_top = gr.Examples(inputs=garment_top,
                                           examples_per_page=5,
-                                          examples=getImageUrl(api_url_upper))
+                                          examples=getImageUrl(api_url_lower))
                 # garment_down = gr.Image(sources='clipboard', type="numpy", label="lower garment")
                 # example_down = gr.Examples(inputs=garment_down,
                 #                            examples_per_page=5,
